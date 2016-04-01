@@ -1,0 +1,1 @@
+soffice --headless --convert-to pdf:draw_pdf_Export /srv/www/website/atualtec.dev/atual.dev/srv/baixa/empresa/arquivos/tmp/4694ea57700a98c5603367f4afae162d.cdr --outdir /srv/www/website/atualtec.dev/atual.dev/srv/baixa/empresa/arquivos/tmp/

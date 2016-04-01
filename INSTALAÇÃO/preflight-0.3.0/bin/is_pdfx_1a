@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+
+begin
+  require 'preflight'
+rescue LoadError
+  require 'bundler'
+  Bundler.setup
+  $LOAD_PATH.unshift File.dirname(__FILE__) + "/../lib/" 
+  require 'preflight'
+end
+
+filename  = ARGV.shift
+preflight = Preflight::Profiles::PDFX1A.new
+messages  = preflight.check(filename)
+
+messages.each do |msg|
+  $stderr.puts msg
+end
+
+exit messages.size
